@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+/* Terminal palette. Kept as tokens so the whole surface shifts from one place. */
+@theme {
+  --color-base: #0a0c10;
+  --color-panel: #0e1116;
+  --color-elevated: #161a21;
+  --color-line: #222833;
+  --color-fg: #d7dce4;
+  --color-muted: #8b95a5;
+  --color-accent: #4a9eff;
+  --color-up: #26a69a;
+  --color-down: #ef5350;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-base);
+  color: var(--color-fg);
+  font-family: ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slim scrollbars inside the symbol list. */
+.scroll-slim {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+.scroll-slim::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background-color: var(--color-line);
+  border-radius: 4px;
+}
